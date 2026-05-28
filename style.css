@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body
+{
+    background-color:#F2F2F7;
+    font-family: 'Inter', sans-serif;
+}
+
+.profil
+{
+    width: 200px;
+    height: 270px;
+    border-radius: 50px;
+    
+}
+
+.presentation
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    height: 100vh;
+}
+
+.presentation h1 
+{
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+}
+
+.presentation h3
+{
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #4A5D7A;
+    max-width: 800px;
+}
+
+.boutton
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+button
+{
+    border: 1px;
+    background-color: #0066CC;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Change "button" to ".btn-link" */
+.btn-link {
+    border: 1px;
+    background-color: #0066CC;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /* Add these two lines to remove the default blue underline from links */
+    text-decoration: none; 
+    font-family: inherit;
+}
+
+/* Add a hover effect so users know it's clickable! */
+.btn-link:hover {
+    background-color: #004C99; /* Slightly darker blue */
+    transform: scale(1.02); /* Makes it pop out slightly */
+    transition: all 0.2s ease;
+}
+
+
+
+
+.resume
+{
+    width: 20px;
+    height: 20px;
+}
+
+.coverletter
+{
+    width: 20px;
+    height: 20px;   
+}
+
+ul {
+    list-style-type: none; /* Enlève les points noirs par défaut */
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #001533;
+}
+
+li::before {
+    content: '→';
+    color: #0066CC; /* Flèche en bleu */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* DEBUT CONFIG EXPERIENCES */
+.xp
+{
+    border
+    border-color: black;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 40px rgba(0, 21, 51, 0.04);
+    padding: 60px;
+    margin: 80px auto;
+    max-width: 1000px;
+
+}
+
+.xp h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.xp1 {
+    background-color: #F8F9FA; /* Un gris extrêmement clair, presque blanc */
+    border-radius: 24px; /* Bords arrondis un peu plus petits que la boîte externe */
+    padding: 40px;
+    
+    transition: transform 0.3s ease; /* Prépare le terrain pour une animation fluide */
+}
+
+.xp1:hover {
+    transform: scale(1.02);
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 40px rgba(0, 21, 51, 0.08);
+}
+
+.xp1 h3 {
+    color: #001533;
+    margin-bottom: 5px;
+}
+
+.xp1 h4 {
+    color: #4A5D7A;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.xp1 h5 {
+    color: #E3000F; /* En rouge pour attirer l'œil */
+    font-size: 0.9rem;
+    text-transform: uppercase; /* Met tout en majuscules */
+    letter-spacing: 1px; /* Espace légèrement les lettres */
+    margin-bottom: 20px;
+}
+
+.xp1 ul {
+    list-style-type: none; /* Enlève les points noirs par défaut */
+    padding-left: 0;
+}
+
+.xp1 li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #001533;
+}
+
+/* Ajoute une flèche personnalisée devant chaque élément de la liste */
+.xp1 li::before {
+    content: '→';
+    color: #0066CC; /* Flèche en bleu */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Fin config EXPERIENCE PRO */
+
+
+
+
+/* DEBUT CONFIG PROJETS */
+/* --- THE OUTER BOX --- */
+.projects-container {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 60px;
+    max-width: 1000px;
+    margin: 40px auto 80px auto;
+    box-shadow: 0 10px 40px rgba(0, 21, 51, 0.04);
+}
+
+.projects-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- THE GRID SYSTEM --- */
+.projects-grid {
+    display: grid;
+    /* This creates 2 equal columns. We can change it to 3 if you prefer! */
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; /* The space between your project cards */
+}
+
+/* --- THE PROJECT CARDS (Inner Boxes) --- */
+.project-card {
+    background-color: #F8F9FA;
+    border-radius: 24px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Flexbox inside the grid cell to push the link to the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 40px rgba(0, 21, 51, 0.08);
+}
+
+.project-card h3 {
+    color: #001533;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.project-card h4 {
+    color: #E3000F; /* Red accent for the category */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #4A5D7A;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes the link to the bottom if texts are different lengths */
+}
+
+/* The clickable link at the bottom of the card */
+.project-link {
+    color: #0066CC;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: auto; 
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Fin config project */
+
+
+
+
+
+/* DEBUT CONFIG BOITE COMPETENCES */
+/* --- THE OUTER BOX--- */
+.skills-container {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 60px;
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+    box-shadow: 0 10px 40px rgba(0, 21, 51, 0.04);
+}
+
+.skills-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- THE GRID SYSTEM (3 Columns) --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+    gap: 24px;
+}
+
+/* --- THE SKILL CARDS (Inner Boxes) --- */
+.skill-card {
+    background-color: #F8F9FA;
+    border-radius: 24px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.02);
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 40px rgba(0, 21, 51, 0.08);
+}
+
+.skill-card h3 {
+    color: #001533;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* --- THE ICON STYLING --- */
+.card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 102, 204, 0.1); /* Very light blue background */
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #0066CC; /* The SVG icon inherits this blue color */
+}
+
+.card-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Note: Since we used <ul class="mission-list"> in the HTML, 
+   it will automatically inherit the beautiful list styles (with the blue arrow) 
+   that you already wrote for the Experiences section! */
+
+
+
+
+
+
+
+
+/*DEBUT CONFIG ACADEMIC PARCOURS*/
+/* ========================================= */
+/* ACADEMIC TIMELINE CSS */
+/* ========================================= */
+
+.academic-container {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 60px;
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+    box-shadow: 0 10px 40px rgba(0, 21, 51, 0.04);
+}
+
+.academic-container h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* The vertical line */
+.timeline {
+    position: relative;
+    padding-left: 50px; /* Makes room for the line and dots */
+}
+
+/* Drawing the actual line using ::before */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0; /* Stretches the line from top to bottom */
+    width: 4px;
+    background-color: #F2F2F7;
+    border-radius: 4px;
+}
+
+/* The parent container for each step */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* The dots sitting on the line */
+.timeline-dot {
+    position: absolute;
+    left: -39px; /* Pulls the dot perfectly onto the vertical line */
+    top: 30px;   /* Aligns it with the card */
+    width: 18px;
+    height: 18px;
+    background-color: #FFFFFF;
+    border: 4px solid #0066CC;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #FFFFFF; /* Gives it a clean white ring */
+    z-index: 2; /* Keeps the dot on top of the line */
+}
+
+/* The card next to the dot */
+.timeline-content {
+    background-color: #F8F9FA;
+    border-radius: 24px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 40px rgba(0, 21, 51, 0.08);
+}
+
+.timeline-content h3 {
+    color: #001533;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    color: #4A5D7A;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.timeline-date {
+    display: inline-block;
+    color: #E3000F;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    background: rgba(227, 0, 15, 0.1);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/*FIN CONFIG ACADEMIC PARKOUR*/
+
+
+
+
+
+
+/*DEBUT CONFIG QUALITES*/
+/* --- TAG CLOUD FOR QUALITIES --- */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap; /* Allows the tags to drop to the next line if there's no room */
+    gap: 16px;
+    justify-content: center; /* Centers them perfectly */
+}
+
+.quality-tag {
+    background-color: #F8F9FA;
+    padding: 16px 32px;
+    border-radius: 99px; /* This makes them pill-shaped */
+    font-weight: 600;
+    color: #001533;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.quality-tag:hover {
+    background-color: #0066CC;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+}
+
+
+
+
+
+
+/*DEBUT CONFIG FOOTER ET LEGAL PAGE*/
+
+/* ========================================= */
+/* LEGAL PAGE CSS */
+/* ========================================= */
+
+.legal-container {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 60px;
+    max-width: 1000px;
+    margin: 40px auto 80px auto;
+    box-shadow: 0 10px 40px rgba(0, 21, 51, 0.04);
+}
+
+.legal-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.legal-content h3 {
+    color: #001533;
+    font-size: 1.25rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.legal-content p {
+    color: #4A5D7A;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ========================================= */
+/* FOOTER CSS */
+/* ========================================= */
+
+.site-footer {
+    background-color: #FFFFFF;
+    padding: 60px 40px;
+    margin-top: 100px; /* Pushes the footer to the bottom */
+    border-top: 1px solid #E6F0FF;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    gap: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    color: #001533;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    color: #4A5D7A;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #0066CC;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #004C99;
+    text-decoration: underline;
+}
+
+.system-log {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #E3000F;
+    text-align: center;
+}
+
+/*FIN CONFIG FOOTER ET LEGAL PAGE*/
+
+
+
+
+
+
+
+
+
+
+/* ========================================= */
+/* RESPONSIVITÉ MOBILE (Z Fold / iPhone) */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. TYPOGRAPHIE : On réduit la taille des titres géants */
+    .presentation h1 {
+        font-size: 2.8rem;
+    }
+    
+    .presentation h3 {
+        font-size: 1.1rem;
+        padding: 0 20px; /* Empêche le texte de coller aux bords de l'écran */
+    }
+
+    /* 2. BOUTONS : On les empile de haut en bas au lieu de gauche à droite */
+    /* ... tes autres règles mobile ... */
+
+    .boutton {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .btn-link {
+        width: 100%; 
+        justify-content: center; 
+        margin: 10px 0; 
+        
+        /* NOUVEAU : Ajustements pour les longs textes sur mobile */
+        font-size: 0.95rem; /* Réduit un tout petit peu la taille de la police */
+        text-align: center;
+        white-space: normal; /* Autorise le texte à passer sur deux lignes si l'écran est trop petit */
+        padding: 12px; /* Ajuste l'espacement interne pour que le bouton ne soit pas trop massif */
+    }
+
+    /* 3. LES BOÎTES EXTERNES : On réduit les énormes marges blanches */
+    .xp, .projects-container, .skills-container, .academic-container, .legal-container, .qualities-container {
+        padding: 40px 25px; /* Moins de vide à l'intérieur de la boîte */
+        margin: 30px 15px;  /* Laisse juste un petit espace entre la boîte et les bords du téléphone */
+        border-radius: 24px; /* On réduit un peu l'arrondi pour que ça fasse moins "bulle" sur mobile */
+    }
+
+    /* 4. LE MOTEUR DE GRILLE : On casse les colonnes pour tout mettre sur 1 seule file */
+    .projects-grid, .skills-grid {
+        grid-template-columns: 1fr; /* "1 fraction" = 1 seule colonne qui prend 100% de la place */
+        gap: 20px;
+    }
+
+    /* 5. LE FOOTER : On aligne tout proprement au centre */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne s'ils manquent de place */
+        justify-content: center;
+    }
+}
