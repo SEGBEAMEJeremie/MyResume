@@ -11,7 +11,6 @@ body
     width: 200px;
     height: 270px;
     border-radius: 50px;
-    
 }
 
 .presentation
@@ -658,5 +657,13 @@ li::before {
     .footer-links {
         flex-wrap: wrap; /* Permet aux liens de passer à la ligne s'ils manquent de place */
         justify-content: center;
+    }
+
+    /* Ajustement de l'accueil pour éviter que la photo touche le haut */
+    .presentation {
+        height: auto;           /* Annule la hauteur stricte qui bloquait le contenu */
+        min-height: 100vh;      /* Garde le bel effet "plein écran" si possible */
+        padding-top: 60px;      /* Force un espace de 60px tout en haut */
+        padding-bottom: 40px;   /* Garde un peu d'espace en bas avant les expériences */
     }
 }
