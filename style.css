@@ -99,6 +99,12 @@ button
     height: 20px;   
 }
 
+.portfolio
+{
+    width: 20px;
+    height: 20px;
+}
+
 ul {
     list-style-type: none; /* Enlève les points noirs par défaut */
     padding-left: 0;
