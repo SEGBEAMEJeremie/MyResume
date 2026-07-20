@@ -33,6 +33,7 @@ Ce projet a été conçu selon une approche **"Minimalist & Secure by Design"**,
 ## 📁 Structure du Projet
 
 ```text
+
 MyResume/
 ├── Frontend/
 │   ├── index.html        # Page principale (CV & Portfolio)
@@ -45,3 +46,5 @@ MyResume/
 ├── Icones/               # Ressources vectorielles (SVG) & Favicon
 ├── images/               # Graphismes & photo de profil
 └── README.md             # Documentation du dépôt
+
+``` 
