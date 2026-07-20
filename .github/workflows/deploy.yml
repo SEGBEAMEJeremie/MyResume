@@ -1,0 +1,42 @@
+name: Deploy Portfolio to GitHub Pages
+
+# 1. Quand est-ce que le robot doit s'activer ?
+on:
+  push:
+    branches: ["main"] # Remplace par "master" si ta branche principale s'appelle master
+  workflow_dispatch:   # Permet aussi de déclencher un déploiement manuel via un bouton
+
+# 2. Les droits d'accès de sécurité (Le principe du moindre privilège)
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 3. Éviter que deux déploiements se marchent sur les pieds
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# 4. Le travail à effectuer (Le Job)
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest # Le robot démarre un conteneur Linux éphémère
+    
+    steps:
+      - name: 📥 Récupération du code source
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Configuration de l'environnement GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 📦 Préparation de l'artefact (Le dossier à déployer)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './src' # On indique au robot de ne prendre QUE le dossier src/
+
+      - name: 🚀 Déploiement en production
+        id: deployment
+        uses: actions/deploy-pages@v4
