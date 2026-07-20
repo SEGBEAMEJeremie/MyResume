@@ -1,48 +1,47 @@
-#  Infrastructure Portfolio & CV - Jeremy SEGBEAME
+# Portfolio & CV - Jérémie SEGBEAME
 
-Bienvenue sur le dépôt de mon portfolio professionnel et CV en ligne. 
-Je suis un étudiant en Systèmes et Réseaux basé à Strasbourg, spécialisé dans la conception d'architectures à haute disponibilité, l'automatisation et la sécurisation des topologies.
+Bienvenue sur le dépôt de mon portfolio et CV en ligne. 
+Passionné par l'administration systèmes, les réseaux et la sécurité opérationnelle, cette vitrine web présente mon parcours, mes compétences techniques, mes projets documentés ainsi que mon Homelab.
 
-🔗 **Lien vers la production :** https://segbeamejeremie.github.io/MyResume/
-
----
-
-## Architecture et Choix Techniques
-
-Ce projet a été conçu avec une approche **"Security by Design"** et une volonté de performance maximale. J'ai volontairement banni l'utilisation de langages dynamiques ou de scripts côté client pour garantir la stabilité et la sécurité.
-
-*   **Front-end pur :** 100% HTML5 et CSS3. Aucun JavaScript n'est exécuté sur ce site.
-*   **Hébergement :** Déployé sur **GitHub Pages** pour bénéficier d'une haute disponibilité et d'une distribution globale (CDN).
-*   **Sécurité (LCEN & RGPD) :**
-    *   Aucun cookie de suivi, aucun traqueur d'analyse.
-    *   Chiffrement SSL/TLS natif via GitHub.
-    *   Obfuscation des points de contact (anti-scraping bot).
-    *   Nettoyage systématique des métadonnées des fichiers PDF proposés en téléchargement (OPSEC).
-*   **Responsivité :** Utilisation intensive de CSS Grid, Flexbox et des Media Queries pour garantir un affichage natif sur tous les terminaux (Bureautique, Mobile, Tablette).
+ **Consulter le site en direct :** [https://segbeamejeremie.github.io/MyResume/](https://segbeamejeremie.github.io/MyResume/)
 
 ---
 
-##  Journal de Déploiement (UI/UX)
+## Architecture & Choix Techniques
 
-Conception de l'interface graphique selon un modèle modulaire et hérité :
+Ce projet a été conçu selon une approche **"Minimalist & Secure by Design"**, visant une performance maximale, une sobriété numérique et une navigation fluide sans dépendances lourdes :
 
-*   **Section Héro (Présentation) :** Création d'un premier point de vue centré et structuré pour l'atterrissage de l'utilisateur[cite: 6].
-*   **Typographie Globale :** Importation de la police `Inter` via Google Fonts pour un rendu épuré, avec un dimensionnement relatif (`rem`) et des largeurs maximales (`max-width`) pour optimiser la lisibilité sur plusieurs lignes[cite: 6].
-*   **Système de Grille & Flexbox :** Utilisation de conteneurs spécifiques pour aligner stratégiquement les éléments, notamment une séparation stricte entre la structure de la boîte (`.boutton`) et le style de l'élément cliquable (`button`)[cite: 6].
-*   **Gestion des Assets :** Centralisation de la configuration des dimensions d'icônes directement dans le fichier CSS pour une meilleure maintenabilité de l'infrastructure[cite: 6].
-*   **Micro-interactions :** Déploiement d'effets de survol dynamiques sur les cartes d'expérience (`.xp1:hover`), utilisant un agrandissement d'échelle (`transform: scale(1.02)`) soutenu par une transition fluide de 0.3s (`transition: transform 0.3s ease;`)[cite: 6].
+*   **Technologies Web :** HTML5, CSS3 modulaire et Vanilla JavaScript (sans framework).
+*   **Hébergement & CDN :** Déployé sur **GitHub Pages** garantissant une haute disponibilité et un chiffrement SSL/TLS natif.
+*   **Sécurité & Confidentialité (RGPD / OPSEC) :**
+    *   Aucun cookie de suivi, aucun traqueur d'analyse tiers.
+    *   Obfuscation des coordonnées de contact contre le scraping automatique.
+    *   Purge systématique des métadonnées sur l'ensemble des fichiers PDF proposés au téléchargement.
+*   **Design Responsive :** Adaptation sur tous les écrans (Desktop, Tablette, Mobile) grâce à CSS Grid et Flexbox.
 
 ---
 
-## 📂 Structure du Répertoire
+## ✨ Fonctionnalités & Améliorations Récentes (UI/UX)
+
+*   **Barre de Progression de Lecture :** Indicateur visuel discret en haut d'écran permettant de suivre sa progression lors du défilement de la page.
+*   **Bouton Scroll-to-Top :** Bouton flottant ergonomique apparaissant au défilement pour remonter en haut de page en un clic.
+*   **Micro-interactions & Animations CSS :** Effets de survol dynamiques (`transform: scale(1.02)`, transitions fluides 0.3s) sur les cartes de projets et d'expériences.
+*   **Typographie & Lisibilité :** Utilisation de la police `Inter` avec dimensions relatives (`rem`) et contraintes de largeur (`max-width`) pour un confort de lecture optimal.
+
+---
+
+## 📁 Structure du Projet
 
 ```text
-📁 MyResume/
-    |--📁 Frontend 
-        ├── 📄 index.html        # Fichier racine de l'architecture
-        ├── 📄 legal.html        # Mentions légales et politiques de confidentialité
-        ├── 📄 style.css         # Feuille de style unique et modulaire
-    ├── 📁 images/           # Ressources photographiques
-    ├── 📁 Icones/           # Ressources vectorielles (SVG) et Favicon
-    └── 📁 Files/            # Fichiers PDF purgés (CV et Lettre de motivation)
-
+MyResume/
+├── Frontend/
+│   ├── index.html        # Page principale (CV & Portfolio)
+│   ├── legal.html        # Mentions légales & politiques de confidentialité
+│   ├── style.css         # Feuille de style CSS3 principale
+│   └── script.js        # Script Vanilla JS (Progression & Scroll-to-top)
+├── Files/
+│   ├── Admin/            # CV et Lettres de motivation (PDF purgés)
+│   └── Documentations/   # Documentation technique des projets (VPN, Active Directory, ARP Spoofing)
+├── Icones/               # Ressources vectorielles (SVG) & Favicon
+├── images/               # Graphismes & photo de profil
+└── README.md             # Documentation du dépôt
