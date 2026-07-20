@@ -1,4 +1,4 @@
-# 🌐 Infrastructure Portfolio & CV - Jeremy SEGBEAME
+#  Infrastructure Portfolio & CV - Jeremy SEGBEAME
 
 Bienvenue sur le dépôt de mon portfolio professionnel et CV en ligne. 
 Je suis un étudiant en Systèmes et Réseaux basé à Strasbourg, spécialisé dans la conception d'architectures à haute disponibilité, l'automatisation et la sécurisation des topologies.
@@ -7,7 +7,7 @@ Je suis un étudiant en Systèmes et Réseaux basé à Strasbourg, spécialisé 
 
 ---
 
-## 🏗️ Architecture et Choix Techniques
+## Architecture et Choix Techniques
 
 Ce projet a été conçu avec une approche **"Security by Design"** et une volonté de performance maximale. J'ai volontairement banni l'utilisation de langages dynamiques ou de scripts côté client pour garantir la stabilité et la sécurité.
 
@@ -22,7 +22,7 @@ Ce projet a été conçu avec une approche **"Security by Design"** et une volon
 
 ---
 
-## 🛠️ Journal de Déploiement (UI/UX)
+##  Journal de Déploiement (UI/UX)
 
 Conception de l'interface graphique selon un modèle modulaire et hérité :
 
