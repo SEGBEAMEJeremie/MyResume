@@ -3,7 +3,7 @@
 Bienvenue sur le dépôt de mon portfolio professionnel et CV en ligne. 
 Je suis un étudiant en Systèmes et Réseaux basé à Strasbourg, spécialisé dans la conception d'architectures à haute disponibilité, l'automatisation et la sécurisation des topologies.
 
-🔗 **Lien vers la production :** https://takentech.github.io/MyResume/
+🔗 **Lien vers la production :** https://segbeamejeremie.github.io/MyResume/
 
 ---
 
@@ -38,10 +38,11 @@ Conception de l'interface graphique selon un modèle modulaire et hérité :
 
 ```text
 📁 MyResume/
-├── 📄 index.html        # Fichier racine de l'architecture
-├── 📄 legal.html        # Mentions légales et politiques de confidentialité
-├── 📄 style.css         # Feuille de style unique et modulaire
-├── 📁 images/           # Ressources photographiques
-├── 📁 Icones/           # Ressources vectorielles (SVG) et Favicon
-└── 📁 Files/            # Fichiers PDF purgés (CV et Lettre de motivation)
+    |--📁 Frontend 
+        ├── 📄 index.html        # Fichier racine de l'architecture
+        ├── 📄 legal.html        # Mentions légales et politiques de confidentialité
+        ├── 📄 style.css         # Feuille de style unique et modulaire
+    ├── 📁 images/           # Ressources photographiques
+    ├── 📁 Icones/           # Ressources vectorielles (SVG) et Favicon
+    └── 📁 Files/            # Fichiers PDF purgés (CV et Lettre de motivation)
 

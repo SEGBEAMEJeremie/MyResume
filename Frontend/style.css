@@ -133,7 +133,6 @@ li::before {
 /* DEBUT CONFIG EXPERIENCES */
 .xp
 {
-    border
     border-color: black;
     border-radius: 40px;
     background-color: #FFFFFF;
@@ -350,10 +349,6 @@ li::before {
     width: 28px;
     height: 28px;
 }
-
-/* Note: Since we used <ul class="mission-list"> in the HTML, 
-   it will automatically inherit the beautiful list styles (with the blue arrow) 
-   that you already wrote for the Experiences section! */
 
 
 
@@ -672,4 +667,64 @@ li::before {
         padding-top: 60px;      /* Force un espace de 60px tout en haut */
         padding-bottom: 40px;   /* Garde un peu d'espace en bas avant les expériences */
     }
+}
+
+
+
+
+
+
+
+
+
+/* Bouton Retour en haut */
+#scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #0066CC; /* Même bleu que ton accentuation */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    
+    /* Animation d'apparition/disparition fluide */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+
+/* Classe ajoutée par JS quand on défile */
+#scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Effet au survol */
+#scroll-top-btn:hover {
+    background-color: #004C99;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+}
+
+
+
+
+/* Barre de progression au début de page*/
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #0066CC; /* Ton bleu d'accentuation */
+    width: 0%;
+    z-index: 1001;
+    transition: width 0.1s ease-out;
 }
