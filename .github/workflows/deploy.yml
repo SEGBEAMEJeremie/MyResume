@@ -40,3 +40,15 @@ jobs:
       - name: 🚀 Déploiement en production
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: 📱 Notification Telegram (Statut du déploiement)
+        if: always() # Le bot parle même si le déploiement a planté
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ⚙️ [SYSTEM LOG] Exécution CI/CD terminée.
+            👨‍💻 Dépôt : ${{ github.repository }}
+            🚀 Statut final : ${{ job.status }}
+            🔗 Lien : https://segbeamejeremie.github.io/MyResume/
