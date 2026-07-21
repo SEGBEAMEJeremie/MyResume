@@ -11,6 +11,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  
 
 # 3. Éviter que deux déploiements se marchent sur les pieds
 concurrency:
