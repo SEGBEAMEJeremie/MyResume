@@ -1,50 +1,47 @@
-# Portfolio & CV - Jérémie SEGBEAME
+# MyResume - Portfolio & Infrastructure Automatisée
 
-Bienvenue sur le dépôt de mon portfolio et CV en ligne. 
-Passionné par l'administration systèmes, les réseaux et la sécurité opérationnelle, cette vitrine web présente mon parcours, mes compétences techniques, mes projets documentés ainsi que mon Homelab.
+Bienvenue sur le dépôt de mon portfolio professionnel et CV interactif. 
 
- **Consulter le site en direct :** [https://segbeamejeremie.github.io/MyResume/](https://segbeamejeremie.github.io/MyResume/)
+Plus qu'une simple page web statique, ce projet a été conçu pour servir de démonstration technique. Il illustre mes compétences en administration système, en intégration continue (CI/CD) et ma volonté de mettre en place des flux de travail professionnels sécurisés et monitorés.
 
----
+## 👨‍💻 À propos de l'auteur
 
-## Architecture & Choix Techniques
+**Jérémie SEGBEAME**
+Futur Bachelor en Administration Systèmes, Réseaux et Bases de données (EPSI Lille), je suis actuellement technicien support informatique. 
+Passionné par l'automatisation et la cybersécurité (Hack The Box : [@SoldierJerem](https://profile.hackthebox.com/profile/019dd3e3-8e4b-71df-8add-e4bd87b10871)), je construis des architectures résilientes et j'automatise les tâches répétitives. Chaque erreur est documentée, logguée et corrigée pour ne jamais se reproduire.
 
-Ce projet a été conçu selon une approche **"Minimalist & Secure by Design"**, visant une performance maximale, une sobriété numérique et une navigation fluide sans dépendances lourdes :
+## Architecture Technique
 
-*   **Technologies Web :** HTML5, CSS3 modulaire et Vanilla JavaScript (sans framework).
-*   **Hébergement & CDN :** Déployé sur **GitHub Pages** garantissant une haute disponibilité et un chiffrement SSL/TLS natif.
-*   **Sécurité & Confidentialité (RGPD / OPSEC) :**
-    *   Aucun cookie de suivi, aucun traqueur d'analyse tiers.
-    *   Obfuscation des coordonnées de contact contre le scraping automatique.
-    *   Purge systématique des métadonnées sur l'ensemble des fichiers PDF proposés au téléchargement.
-*   **Design Responsive :** Adaptation sur tous les écrans (Desktop, Tablette, Mobile) grâce à CSS Grid et Flexbox.
+Le projet repose sur une séparation stricte entre l'espace de développement et le serveur de production :
 
----
+*   **Frontend :** HTML5, CSS3, Vanilla JavaScript (zéro dépendance lourde, optimisation maximale).
+*   **Hébergement (Prod) :** GitHub Pages (HTTPS sécurisé).
+*   **Moteur CI/CD :** GitHub Actions s'exécutant sur des conteneurs Linux (Ubuntu) éphémères.
+*   **Supervision & Alerting :** Intégration de l'API Telegram pour notifier les statuts de déploiement (Host: Gideon).
 
-## ✨ Fonctionnalités & Améliorations Récentes (UI/UX)
+## Workflow DevOps (Git Flow)
 
-*   **Barre de Progression de Lecture :** Indicateur visuel discret en haut d'écran permettant de suivre sa progression lors du défilement de la page.
-*   **Bouton Scroll-to-Top :** Bouton flottant ergonomique apparaissant au défilement pour remonter en haut de page en un clic.
-*   **Micro-interactions & Animations CSS :** Effets de survol dynamiques (`transform: scale(1.02)`, transitions fluides 0.3s) sur les cartes de projets et d'expériences.
-*   **Typographie & Lisibilité :** Utilisation de la police `Inter` avec dimensions relatives (`rem`) et contraintes de largeur (`max-width`) pour un confort de lecture optimal.
+Afin de garantir un "Zero Downtime" et de protéger la production, la branche `main` n'est jamais modifiée en direct.
 
----
+1.  **Isolation :** Tout développement (ajout d'une compétence, modification CSS) se fait sur une branche dédiée (ex: `update-projets-portfolio`).
+2.  **Pull Request :** Le code est vérifié et validé manuellement.
+3.  **Build Automatique (`deploy.yml`) :** À la fusion, le robot CI/CD clone le dépôt, isole exclusivement le dossier de travail `./src/`, crée un artefact et le déploie en ligne.
+4.  **Logging :** Un bot Telegram personnel est notifié du succès ou de l'échec de la mise en production.
 
-## 📁 Structure du Projet
+## Arborescence du Projet
+
+L'architecture suit les standards professionnels de séparation des environnements :
 
 ```text
-
 MyResume/
-├── Frontend/
-│   ├── index.html        # Page principale (CV & Portfolio)
-│   ├── legal.html        # Mentions légales & politiques de confidentialité
-│   ├── style.css         # Feuille de style CSS3 principale
-│   └── script.js        # Script Vanilla JS (Progression & Scroll-to-top)
-├── Files/
-│   ├── Admin/            # CV et Lettres de motivation (PDF purgés)
-│   └── Documentations/   # Documentation technique des projets (VPN, Active Directory, ARP Spoofing)
-├── Icones/               # Ressources vectorielles (SVG) & Favicon
-├── images/               # Graphismes & photo de profil
-└── README.md             # Documentation du dépôt
-
-``` 
+├── .github/workflows/       # Moteur d'automatisation (deploy.yml)
+├── src/                     # Environnement de travail (Source)
+│   ├── files/               # Ressources téléchargeables (CV, Docs techniques)
+│   ├── icons/               # Actifs graphiques SVG / Favicon
+│   ├── images/              # Médias
+│   ├── index.html           # Point d'entrée principal
+│   ├── legal.html           # Mentions légales
+│   ├── script.js            # Logique d'interface
+│   ├── style.css            # Feuille de style
+│   └── .nojekyll            # Bypass du moteur GitHub classique
+└── README.md                # Documentation de l'infrastructure
