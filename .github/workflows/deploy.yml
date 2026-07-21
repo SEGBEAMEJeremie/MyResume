@@ -51,4 +51,4 @@ jobs:
             ⚙️ [SYSTEM LOG] Exécution CI/CD terminée.
             👨‍💻 Dépôt : ${{ github.repository }}
             🚀 Statut final : ${{ job.status }}
-            🔗 Lien : https://segbeamejeremie.github.io/MyResume/
+            🔗 Lien : https://segbeamejeremie.github.io/MyResume/ 
